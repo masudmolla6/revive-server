@@ -8,7 +8,14 @@ const port = process.env.PORT || 5000;
 
 // middleWare
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: [
+      "https://revive-market-e46c5.web.app",
+      "https://revive-market-e46c5.firebaseapp.com",
+    ],
+  })
+);
 
 
 
